@@ -1,0 +1,49 @@
+nov 8/13:44:28.979 DEBUG2 : 		
+
+StartSession()
+
+nov 8/13:44:28.979 INFO   : Debug Log(info): Loading the I-jet driver
+nov 8/13:44:28.979 DEBUG2 : 		-> ConnectToHardware()
+nov 8/13:44:28.979 DEBUG2 : 		-> CreateJetTerminal()
+nov 8/13:44:28.979 DEBUG2 : 		<- CreateJetTerminal()
+nov 8/13:44:28.979 DEBUG2 : 		-> AcquireSigAPIPtr()
+nov 8/13:44:28.979 DEBUG2 : 		  SigAPISetPath('D:\Embedded Workbench 9.2\arm\bin\jet\bin')
+nov 8/13:44:29.009 DEBUG2 : 		<- AcquireSigAPIPtr()
+nov 8/13:44:29.009 DEBUG2 : 		-> CreateSigProbe()
+nov 8/13:44:29.029 DEBUG2 : 		  SigProbe version: 1.67
+nov 8/13:44:29.029 DEBUG2 : 		<- CreateSigProbe()
+nov 8/13:44:29.029 DEBUG2 : 		-> SigProbeInit()
+nov 8/13:44:29.029 DEBUG2 : 		<- SigProbeInit()
+nov 8/13:44:29.029 INFO   : Debug Log(info): Probe: Probe SW module ver 1.67
+
+nov 8/13:44:29.029 INFO   : Probe: Probe SW module ver 1.67
+
+nov 8/13:44:29.029 INFO   : Debug Log(info): Probe: Option: trace(Auto,size_limit=100%)
+
+nov 8/13:44:29.029 INFO   : Probe: Option: trace(Auto,size_limit=100%)
+
+nov 8/13:44:29.029 DEBUG2 : 		-> ConnectToProbe()
+nov 8/13:44:29.029 DEBUG2 : 		  ISigProbe::EnumScan()
+nov 8/13:44:29.089 DEBUG2 : 		  scanning finished: found 0 probes
+nov 8/13:44:30.909 INFO   : Debug Log(error): Fatal error: Probe not found   Session aborted!
+nov 8/13:44:30.909 DEBUG2 : 		<- ConnectToProbe()
+nov 8/13:44:30.909 DEBUG2 : 		<- ConnectToHardware()
+nov 8/13:44:30.909 DEBUG2 : 		********** 'Controlled' exception (1) caught in DbBeginSession
+nov 8/13:44:30.909 INFO   : Debug Log(info): Unloaded macro file: D:\Embedded Workbench 9.2\arm/config/flashloader/Infineon/FlashTVII.mac
+nov 8/13:44:30.909 INFO   : Debug Log(info): Unloaded macro file: D:\Embedded Workbench 9.2\arm/config/debugger/Infineon/CYT4BB_M7.dmac
+nov 8/13:44:30.909 INFO   : Debug Log(info): Unloaded macro file: D:\Embedded Workbench 9.2\arm/config/debugger/Infineon/CYTVII_M7.dmac
+nov 8/13:44:30.909 INFO   : Debug Log(info): Unloaded macro file: D:\Embedded Workbench 9.2\arm/config/debugger/Infineon/CYTVII_Trace.dmac
+nov 8/13:44:30.909 INFO   : Debug Log(info): Unloaded macro file: D:\Embedded Workbench 9.2\arm/config/debugger/Infineon/CYTVII_Common.dmac
+nov 8/13:44:31.061 DEBUG2 : 		-> AboutToStopSession()
+nov 8/13:44:31.061 DEBUG2 : 		<- AboutToStopSession()
+nov 8/13:44:31.083 DEBUG2 : 		-> PrepareStopSession()
+nov 8/13:44:31.083 DEBUG2 : 		<- PrepareStopSession()
+nov 8/13:44:31.083 DEBUG2 : 		StopGui()
+nov 8/13:44:31.118 DEBUG2 : 		-> StopSession()
+nov 8/13:44:31.118 DEBUG2 : 		-> TerminateHardware()
+nov 8/13:44:31.118 DEBUG2 : 		  SigAPITerm()
+nov 8/13:44:31.118 DEBUG2 : 		<- TerminateHardware()
+nov 8/13:44:31.118 DEBUG2 : 		<- StopSession()
+nov 8/13:44:31.118 DEBUG2 : 		-> ~TdJetDriver()
+nov 8/13:44:31.118 DEBUG2 : 		-> TerminateHardware()
+nov 8/13:44:31.118 DEBUG2 : 		<- TerminateHardware()

@@ -1,0 +1,20 @@
+{
+  "workspace": {
+    "path": "${workspaceFolder}\\tviibh4m\\tools\\iar\\flash\\tviibh4m_flash_cm0plus_cm7_0_cm7_1_template.eww"
+  },
+  "workspaces": {
+    "${workspaceFolder}\\tviibh4m\\tools\\iar\\flash\\tviibh4m_flash_cm0plus_cm7_0_cm7_1_template.eww": {
+      "configs": {
+        "${workspaceFolder}\\tviibh4m\\tools\\iar\\flash\\cm0plus_cm7_0_cm7_1\\cm0plus.ewp": "rev_b",
+        "${workspaceFolder}\\tviibh4m\\tools\\iar\\flash\\cm7_0_mc\\cm7_0.ewp": "rev_b",
+        "${workspaceFolder}\\tviibh4m\\tools\\iar\\flash\\cm7_1_mc\\cm7_1.ewp": "rev_b"
+      },
+      "selected": {
+        "path": "${workspaceFolder}\\tviibh4m\\tools\\iar\\flash\\cm0plus_cm7_0_cm7_1\\cm0plus.ewp"
+      }
+    }
+  },
+  "workbench": {
+    "path": "D:\\iar-9401"
+  }
+}

@@ -1,0 +1,41 @@
+{
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "运行",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "同步",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ],
+    "files.associations": {
+        "include.h": "c",
+        "task_.h": "c",
+        "initializer_list": "c",
+        "control.h": "c",
+        "cy_device_headers.h": "c",
+        "lq_utm.h": "c",
+        "lq_telecontrol.h": "c",
+        "lq_counter.h": "c",
+        "string.h": "c",
+        "cstddef": "c",
+        "lq_gps_bd.h": "c",
+        "lq_mt9v034.h": "c",
+        "lq_bldc.h": "c",
+        "motor_closed_loop.h": "c",
+        "cy_tcpwm_counter.h": "c",
+        "lq_timer.h": "c",
+        "lq_uart.h": "c",
+        "limits": "c"
+    },
+    "C_Cpp.errorSquiggles": "disabled"
+}

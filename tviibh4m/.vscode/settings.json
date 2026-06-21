@@ -1,0 +1,38 @@
+{
+    "MicroPython.executeButton": [
+        {
+            "text": "▶",
+            "tooltip": "运行",
+            "alignment": "left",
+            "command": "extension.executeFile",
+            "priority": 3.5
+        }
+    ],
+    "MicroPython.syncButton": [
+        {
+            "text": "$(sync)",
+            "tooltip": "同步",
+            "alignment": "left",
+            "command": "extension.execute",
+            "priority": 4
+        }
+    ],
+    "files.associations": {
+        "include.h": "c",
+        "limits": "cpp",
+        "cmath": "c",
+        "cstdlib": "c",
+        "lq_key.h": "c",
+        "lq_iic_gyro.h": "c",
+        "lq_font.h": "c",
+        "cstdarg": "c",
+        "xstddef": "c",
+        "cstddef": "c",
+        "type_traits": "c",
+        "cy_cpu.h": "c",
+        "cy_syslib.h": "c",
+        "cy_i2s.h": "c",
+        "lq_timer.h": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}

@@ -1,0 +1,79 @@
+#include "include.h"
+enum{                   
+  flatAngle,
+  rightAngleL,
+  rightAngleR,
+  cross,
+  huanL1,
+  huanL2,
+  huanR1,
+  huanR2,
+};
+int taskState = flatAngle;              //简易状态机
+void task_heartbeat()
+{
+        LQ_Pin_Write(P15_0, 1); // 配置输出高电平
+        //=============================图像=====================================//
+        MT9V034_Get_Image(&originalImg[0][0]);  //获取图像
+        get_uImage();                           //获取需要的图像尺寸
+        zzy_binaryzation(40);                   //二值化
+        set_frame(0x00);                        //设置黑框
+        line_search();                          //搜线
+        longest_line();                         //获取最长白列
+        set_frame(0xff);                        //设置白框
+        get_depth();                            //获取纵深
+//        memcpy(showImage,uImage,IMAGE_SIZE);
+        //=============================识别=====================================//
+        //==========直道==========//
+        setSpeed=70;
+        if(taskState==flatAngle)            
+        {
+            int tmpL = is_right_angle_L(40);
+            int tmpR = is_right_angle_R(40);
+            if(longestLineLen<30&&depth[5]<30&&abs(depth[30]-depth[5])<10)
+            {
+                taskState=rightAngleL;
+            }
+            else if(longestLineLen<20&&depth[89]<30&&abs(depth[64]-depth[89])<10)
+            {
+                taskState=rightAngleR;
+            }
+            static float errrorLast=0;
+            float error = 47 - line[p_lmr_m][35];
+            error = 0.02 *  error   +  0 *(error-errrorLast );
+            errrorLast = error;
+            if(error > 0)
+            {
+              setSpeedL = setSpeed - setSpeed*error*1;
+              setSpeedR = setSpeed + setSpeed*error*0;
+            }else{
+              setSpeedL = setSpeed - setSpeed*error*0;
+              setSpeedR = setSpeed + setSpeed*error*1;
+            }
+        }
+        //==========左转==========//
+        if(taskState==rightAngleL)            
+        {
+            if(longestLineLen>30)
+            {
+                taskState=flatAngle;
+            }
+            setSpeedL=setSpeed*0;
+            setSpeedR=setSpeed*1;
+        }
+        //==========右转=========//
+        if(taskState==rightAngleR)            
+        {
+            if(longestLineLen>30)
+            {
+                taskState=flatAngle;
+            }
+            setSpeedL=setSpeed*1;
+            setSpeedR=setSpeed*0;
+        }
+         //===========================控制=====================================//
+        get_speed(10);
+        control_speed(10);
+        
+        LQ_Pin_Write(P15_0, 0); // 配置输出高电平
+}
